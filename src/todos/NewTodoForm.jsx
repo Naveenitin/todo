@@ -40,7 +40,8 @@ const NewTodoForm = ({ todos, onCreatePressed }) => {
 
   return (
     <FormContainer
-      onSubmit={() => {
+      onSubmit={(e) => {
+        e.preventDefault();
         const isDuplicateTest = todos.some((todo) => todo.text === inputValue);
         if (!isDuplicateTest) {
           onCreatePressed(inputValue);
