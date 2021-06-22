@@ -1,7 +1,6 @@
 import React from "react";
 import { hot } from "react-hot-loader";
 import styled from "styled-components";
-import "./App.css";
 import TodoList from "./todos/TodoList";
 
 const AppContainer = styled.div`
@@ -10,7 +9,7 @@ const AppContainer = styled.div`
   color: #222222;
   width: 100vw;
   height: 100vh;
-`
+`;
 
 const App = () => (
   <AppContainer>
