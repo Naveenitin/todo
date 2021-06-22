@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import "./NewTodoForm.css";
+import { getTodos } from "./selectors";
 import { addTodoRequest } from "./thunks";
 
 // connect()() : IT is a higher order function
@@ -36,7 +37,7 @@ const NewTodoForm = ({ todos, onCreatePressed }) => {
 };
 
 const mapStateToProps = (state) => ({
-  todos: state.todos,
+  todos: getTodos(state),
 });
 
 const mapDispatchToProps = (dispatch) => ({
